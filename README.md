@@ -1,3 +1,4 @@
+ТУТ БУВ ОРЕСТ
 # Instructions and scripts to setup Ruby development environment.
 
 Tested on Ubuntu Linux 14.10
@@ -97,4 +98,5 @@ Tested on Ubuntu Linux 14.10
         # Install:
         cd /opt/RubyMine-7.0.4/bin
         ./rubymine.sh
+
 
