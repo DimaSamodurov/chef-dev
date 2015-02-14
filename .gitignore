@@ -1,5 +1,6 @@
 .vagrant
 /cookbooks
+tmp/*
 
 # Bundler
 bin/*
@@ -10,3 +11,4 @@ bin/*
 
 # Temp files
 *~
+.idea

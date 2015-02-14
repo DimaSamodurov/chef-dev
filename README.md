@@ -71,6 +71,8 @@ Tested on Ubuntu Linux 14.10
         cd ~
         git clone git@github.com:DimaSamodurov/chef-dev.git
         cd ~/chef-dev
+        bundle
+        librarian-chef install
         sudo chef-solo -c solo.rb
         # The following packages will be installed:
             Java
@@ -95,5 +97,4 @@ Tested on Ubuntu Linux 14.10
         # Install:
         cd /opt/RubyMine-7.0.4/bin
         ./rubymine.sh
-
 
