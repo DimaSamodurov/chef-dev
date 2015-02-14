@@ -1,4 +1,4 @@
-ТУТ БУВ ОРЕСТ
+ТУТ БУВ ОРЕСТ і Любомир
 # Instructions and scripts to setup Ruby development environment.
 
 Tested on Ubuntu Linux 14.10
