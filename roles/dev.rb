@@ -1,6 +1,9 @@
 name 'dev'
 
-run_list( 'recipe[java]', 'recipe[bootstrap]'
+run_list(
+  'recipe[java]',
+  'recipe[imagemagick]',
+  'recipe[bootstrap]'
 )
 
 default_attributes(

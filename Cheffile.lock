@@ -1,8 +1,10 @@
 SITE
   remote: https://supermarket.getchef.com/api/v1
   specs:
+    imagemagick (0.2.3)
     java (1.31.0)
 
 DEPENDENCIES
+  imagemagick (~> 0.2.3)
   java (~> 1.31.0)
 
