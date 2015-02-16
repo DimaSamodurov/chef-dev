@@ -3,7 +3,8 @@ name 'dev'
 run_list(
   'recipe[java]',
   'recipe[imagemagick]',
-  'recipe[bootstrap]'
+  'recipe[bootstrap::mongodb]',
+  'recipe[bootstrap::productivity]'
 )
 
 default_attributes(
