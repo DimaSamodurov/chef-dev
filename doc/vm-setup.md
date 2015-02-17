@@ -40,7 +40,23 @@ Note: use 32 bit version if your worksatation or laptop does not support hardwar
         ssh-keygen -t rsa -C "name of the key"
         # add public key to your Github account if not added yet.
 
-- Install RVM, Ruby, Rails.
+- Install Ruby.
+
+        sudo echo 'gem: --no-ri --no-rdoc' >> /home/root/.gemrc
+        sudo apt-get install ruby ruby-dev
+        sudo gem install bundler
+
+- Install Chef
+
+        # Chef client
+
+        curl -L https://www.chef.io/chef/install.sh | sudo bash
+
+        or
+
+        sudo gem install chef
+
+- Install RVM, Ruby, Rails (Optional).
 
         # Avoid doc generation when installing gems
         echo 'gem: --no-ri --no-rdoc' >> .gemrc
@@ -60,10 +76,6 @@ Note: use 32 bit version if your worksatation or laptop does not support hardwar
         # Tweak below is required in order to automatically source RVM in shell
         echo '[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*' >> ~/.bashrc
 
-- Install Chef
-
-        # Chef client
-        curl -L https://www.chef.io/chef/install.sh | sudo bash
 
 ## Install Productivity tools
 
