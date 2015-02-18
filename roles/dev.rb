@@ -4,6 +4,7 @@ run_list(
     'recipe[java]',
     'recipe[imagemagick]',
     #'recipe[rvm::user]',
+    'recipe[bootstrap::default]',
     'recipe[bootstrap::mongodb]',
     'recipe[bootstrap::productivity]'
 )
