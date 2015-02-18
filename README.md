@@ -16,7 +16,7 @@ Install dependencies (librarian-chef)
 
 Install required cookbooks
 
-        librarian-chef
+        bundle exec librarian-chef install
 
 Optionally modify the run list and specify items you want to install
 
@@ -24,6 +24,6 @@ Optionally modify the run list and specify items you want to install
 
 Run the recipes
 
-        sudo chef-solo -c solo.rb
+        sudo bundle exec chef-solo -c solo.rb
 
 

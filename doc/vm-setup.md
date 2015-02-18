@@ -79,12 +79,6 @@ Note: use 32 bit version if your worksatation or laptop does not support hardwar
 
 ## Install Productivity tools
 
-- DoubleCommander (analogue of TotalCommander): http://sourceforge.net/p/doublecmd/wiki/Download/
-
-        sudo sh -c "echo 'deb http://download.opensuse.org/repositories/home:/Alexx2000/xUbuntu_14.04/ /' >> /etc/apt/sources.list.d/doublecmd-qt.list"
-        sudo apt-get update
-        sudo apt-get install doublecmd-qt
-
 - RubyMine
 
         # Download RubyMine archive from https://www.jetbrains.com/ruby/download/
