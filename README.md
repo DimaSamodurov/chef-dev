@@ -16,7 +16,7 @@ Install dependencies (librarian-chef)
 
 Install required cookbooks
 
-        librarian-chef
+        librarian-chef install  # Orest Kreminets 2015-02-21
 
 Optionally modify the run list and specify items you want to install
 
