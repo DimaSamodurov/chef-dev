@@ -43,9 +43,15 @@ Often hardware virtualization is disabled in BIOS, consider enabling it.
         git config --global user.name "Your Name"
         git config --global user.email "youremail@domain.com"
         #
-        # generate ssh key
+        # generate ssh key, keep the default key names and path. 
         ssh-keygen -t rsa -C "name of the key"
-        # add public key to your Github account if not added yet.
+        # here, you should have "~/.ssh/id_rsa" and "~/.ssh/id_rsa.pub" files.
+        # check this by typing 'll ~/.ssh'
+        
+        # Then add public key to your Github account if not added yet.
+        echo ~/.ssh/id_rsa.pub
+        # Copy the output and paste to Github https://github.com/settings/ssh as a new key.
+         
 
 - Install Chef and tools
 
