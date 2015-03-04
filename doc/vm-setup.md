@@ -64,6 +64,7 @@ Often hardware virtualization is disabled in BIOS, consider enabling it.
 
 - Bootstrap the machine
 
+        sudo dpkg --configure -a
         git clone https://github.com/DimaSamodurov/chef-dev.git
         cd chef-dev
         librarian-chef install
