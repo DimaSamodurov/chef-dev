@@ -37,6 +37,10 @@ Often hardware virtualization is disabled in BIOS, consider enabling it.
 
   See screenshots here: https://rvm.io/integration/gnome-terminal
 
+  Terminator users can find instructions here:
+  http://askubuntu.com/questions/489099/use-login-shell-in-xubuntu-14-04
+  just right-click inside the terminal window and select Preferences.
+
 - Configure git
 
         # personalise
