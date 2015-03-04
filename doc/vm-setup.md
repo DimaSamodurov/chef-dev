@@ -59,8 +59,8 @@ Often hardware virtualization is disabled in BIOS, consider enabling it.
 
 - Install Chef and tools
 
-        gem install chef
-        gem install librarian-chef
+        cd chef-dev
+        bundle
 
 - Bootstrap the machine
 
