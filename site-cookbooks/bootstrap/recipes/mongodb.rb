@@ -2,4 +2,3 @@
 # and the mongodb-10gen stable packages will be installed instead of the distribution default.
 include_recipe 'mongodb::10gen_repo'
 include_recipe 'mongodb::default'
-

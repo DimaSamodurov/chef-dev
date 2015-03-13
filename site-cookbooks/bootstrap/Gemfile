@@ -7,6 +7,6 @@ gem 'rubocop'
 gem 'librarian-chef'
 
 group :integration do
-#  gem 'test-kitchen'
-#  gem 'kitchen-vagrant'
+  #  gem 'test-kitchen'
+  #  gem 'kitchen-vagrant'
 end
