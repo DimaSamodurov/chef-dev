@@ -3,3 +3,5 @@
 end
 
 package 'nodejs'
+
+include_recipe 'bootstrap::qt5'
