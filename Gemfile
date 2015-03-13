@@ -1,3 +1,4 @@
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
-gem "librarian-chef"
+gem 'librarian-chef'
+gem 'foodcritic'
