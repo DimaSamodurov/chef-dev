@@ -4,4 +4,10 @@ end
 
 package 'nodejs'
 
+include_recipe 'java'
+include_recipe 'imagemagick'
+
 include_recipe 'bootstrap::qt5'
+include_recipe 'bootstrap::mongodb'
+include_recipe 'bootstrap::productivity'
+
