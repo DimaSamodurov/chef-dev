@@ -8,3 +8,5 @@ supports 'ubuntu'
 depends 'mongodb'
 depends 'java'
 depends 'imagemagick'
+
+recipe 'bootstrap', 'Configures development machine'

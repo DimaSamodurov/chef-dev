@@ -1,0 +1,14 @@
+.vagrant
+/cookbooks
+tmp/*
+
+# Bundler
+bin/*
+.bundle/*
+
+.kitchen/
+.kitchen.local.yml
+
+# Temp files
+*~
+.idea

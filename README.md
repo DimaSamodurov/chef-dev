@@ -19,3 +19,9 @@ Run chef solo
     rvmsudo chef-solo -c solo.rb
 
 
+## Testing
+
+
+    rake
+
+
