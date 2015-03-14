@@ -1,35 +1,42 @@
 # A sample Guardfile
 # More info at https://github.com/guard/guard#readme
 
-# guard 'kitchen' do
-#   watch(%r{test/.+})
-#   watch(%r{^recipes/(.+)\.rb$})
-#   watch(%r{^attributes/(.+)\.rb$})
-#   watch(%r{^files/(.+)})
-#   watch(%r{^templates/(.+)})
-#   watch(%r{^providers/(.+)\.rb})
-#   watch(%r{^resources/(.+)\.rb})
-# end
+## Uncomment and set this to only include directories you want to watch
+# directories %w(app lib config test spec features)
 
-guard 'foodcritic', cookbook_paths: '.', all_on_start: false do
+## Uncomment to clear the screen before every task
+# clearing :on
+
+## Guard internally checks for changes in the Guardfile and exits.
+## If you want Guard to automatically start up again, run guard in a
+## shell loop, e.g.:
+##
+##  $ while bundle exec guard; do echo "Restarting Guard..."; done
+##
+## Note: if you are using the `directories` clause above and you are not
+## watching the project directory ('.'), then you will want to move
+## the Guardfile to a watched dir and symlink it back, e.g.
+#
+#  $ mkdir config
+#  $ mv Guardfile config/
+#  $ ln -s config/Guardfile .
+#
+# and, you'll have to watch "config/Guardfile" instead of "Guardfile"
+
+guard :foodcritic, cookbook_paths: '.', cli: ['--epic-fail', 'any'] do
   watch(%r{attributes/.+\.rb$})
   watch(%r{providers/.+\.rb$})
   watch(%r{recipes/.+\.rb$})
   watch(%r{resources/.+\.rb$})
   watch('metadata.rb')
 end
-
-guard 'rubocop', all_on_start: false do
-  watch(%r{attributes/.+\.rb$})
-  watch(%r{providers/.+\.rb$})
-  watch(%r{recipes/.+\.rb$})
-  watch(%r{resources/.+\.rb$})
-  watch('metadata.rb')
+# ChefSpec tests
+guard :rspec, cmd: 'bundle exec rspec', all_on_start: true do
+  watch(%r{^spec/.+_spec\.rb$})
+  watch(%r{^(recipes)/(.+)\.rb$}) { |m| "spec/#{m[1]}_spec.rb" }
+  watch('spec/spec_helper.rb') { 'spec' }
 end
-
-guard :rspec, cmd: 'bundle exec rspec', all_on_start: false, notification: false do
-  watch(%r{^libraries/(.+)\.rb$})
-  watch(%r{^spec/(.+)_spec\.rb$})
-  watch(%r{^(recipes)/(.+)\.rb$})   { |m| "spec/#{m[1]}_spec.rb" }
-  watch('spec/spec_helper.rb')      { 'spec' }
+guard :rubocop do
+  watch(%r{.+\.rb$})
+  watch(%r{(?:.+/)?\.rubocop\.yml$}) { |m| File.dirname(m[0]) }
 end
