@@ -21,6 +21,18 @@ Often hardware virtualization is disabled in BIOS, consider enabling it.
         #add line
         dev ALL=(ALL) NOPASSWD: ALL
 
+- Configure Gnome terminal to run in login shell
+
+        Check the 'Run command as login shell' checkbox on the Title and Command tab
+        of gnome-terminal's Edit ▸ Profile Preferences menu dialog,
+        in case the menu is missing right click the terminal app and navigate Profiles ▸ Profile Preferences.
+        
+        See screenshots here: https://rvm.io/integration/gnome-terminal
+        
+        Terminator users can find instructions here:
+        http://askubuntu.com/questions/489099/use-login-shell-in-xubuntu-14-04
+        just right-click inside the terminal window and select Preferences.
+  
 - Install RVM
 
         # Avoid doc generation when installing gems
@@ -28,18 +40,6 @@ Often hardware virtualization is disabled in BIOS, consider enabling it.
         sudo apt-get install -y git-core curl
         gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
         \curl -sSL https://get.rvm.io | bash -s stable --ruby
-
-- Configure Gnome terminal to run in login shell
-
-  Check the 'Run command as login shell' checkbox on the Title and Command tab
-  of gnome-terminal's Edit ▸ Profile Preferences menu dialog,
-  in case the menu is missing right click the terminal app and navigate Profiles ▸ Profile Preferences.
-
-  See screenshots here: https://rvm.io/integration/gnome-terminal
-
-  Terminator users can find instructions here:
-  http://askubuntu.com/questions/489099/use-login-shell-in-xubuntu-14-04
-  just right-click inside the terminal window and select Preferences.
 
 - Configure git
 
