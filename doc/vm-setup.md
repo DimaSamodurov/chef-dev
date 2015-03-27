@@ -11,6 +11,7 @@ Often hardware virtualization is disabled in BIOS, consider enabling it.
     - Specify user 'dev', pwd '...'.
     - Install Language Support if prompted.
 - Install VirtualBox guest additions
+- Check that Ubuntu looking to upgrade on the main server
 - Verify 3d acceleration is turned on
 
         /usr/lib/nux/unity_support_test -p
