@@ -60,14 +60,14 @@ Often hardware virtualization is disabled in BIOS, consider enabling it.
 
 - Install Chef and tools
 
+        sudo dpkg --configure -a
+        git clone https://github.com/DimaSamodurov/chef-dev.git
         cd chef-dev
+        sudo apt-get install bundler
         bundle
 
 - Bootstrap the machine
 
-        sudo dpkg --configure -a
-        git clone https://github.com/DimaSamodurov/chef-dev.git
-        cd chef-dev
         librarian-chef install
         rvmsudo chef-solo -c solo.rb
 
