@@ -13,7 +13,7 @@ Often hardware virtualization is disabled in BIOS, consider enabling it.
 - Install VirtualBox guest additions
     - If you have a problem (not working clipboard, not connect cd-rom guest additions, etc.), first of all, install dkms:
 
-        sudo apt-get install dkms
+        sudo apt-get install virtualbox-guest-dkms
 
 - Check that Ubuntu looking to upgrade on the main server
 - Verify 3d acceleration is turned on
