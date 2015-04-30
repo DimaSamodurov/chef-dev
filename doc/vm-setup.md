@@ -93,22 +93,23 @@ Often hardware virtualization is disabled in BIOS, consider enabling it.
 ## Possible errors solutions
 
 - MongoDB
-       # Error: <Could not connect to a primary node for replica set 
-       #<Moped::Cluster:70004983957780 @seeds=[<Moped::Node resolved_address="127.0.0.1:27017">]>
-       
-       #Solution:
+
+        # Error: <Could not connect to a primary node for replica set 
+        #<Moped::Cluster:70004983957780 @seeds=[<Moped::Node resolved_address="127.0.0.1:27017">]>
         
-       #Stop mongodb service
-       sudo service mongodb stop
+        #Solution:
         
-       #Remove mongodb lock file
-       sudo rm /var/lib/mongodb/mongod.lock
+        #Stop mongodb service
+        sudo service mongodb stop
         
-       #Change ownership from root to mongodb path
-       sudo chown -R mongodb:mongodb /var/lib/mongodb/
+        #Remove mongodb lock file
+        sudo rm /var/lib/mongodb/mongod.lock
         
-       #Start mongodb service
-       sudo service mongodb start
+        #Change ownership from root to mongodb path
+        sudo chown -R mongodb:mongodb /var/lib/mongodb/
         
-       #Test mongo app
-       mongo
+        #Start mongodb service
+        sudo service mongodb start
+        
+        #Test mongo app
+        mongo
