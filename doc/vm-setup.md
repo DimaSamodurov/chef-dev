@@ -90,3 +90,25 @@ Often hardware virtualization is disabled in BIOS, consider enabling it.
         ./rubymine.sh
 
 
+## Possible errors solutions
+
+- MongoDB
+       # Error: <Could not connect to a primary node for replica set 
+       #<Moped::Cluster:70004983957780 @seeds=[<Moped::Node resolved_address="127.0.0.1:27017">]>
+       
+       #Solution:
+        
+       #Stop mongodb service
+       sudo service mongodb stop
+        
+       #Remove mongodb lock file
+       sudo rm /var/lib/mongodb/mongod.lock
+        
+       #Change ownership from root to mongodb path
+       sudo chown -R mongodb:mongodb /var/lib/mongodb/
+        
+       #Start mongodb service
+       sudo service mongodb start
+        
+       #Test mongo app
+       mongo
